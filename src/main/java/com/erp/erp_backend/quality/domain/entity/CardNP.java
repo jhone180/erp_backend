@@ -11,14 +11,11 @@ import lombok.Value;
 @Entity
 @Getter
 @Setter
-public class CardP {
+public class CardNP {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long sample;
-    @Column(name = "lot_size")
-    private Long lotSize;
-    @Column(name = "defective_items")
-    private Long defectiveItems;
-    private Long proportion;
+    private Long lot;
+    @Column(name = "defective_items_sample")
+    private Long defectiveItemsSample;
 }

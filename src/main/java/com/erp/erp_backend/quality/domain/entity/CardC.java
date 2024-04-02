@@ -1,6 +1,9 @@
 package com.erp.erp_backend.quality.domain.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,14 +14,10 @@ import lombok.Value;
 @Entity
 @Getter
 @Setter
-public class CardP {
+public class CardC {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long sample;
-    @Column(name = "lot_size")
-    private Long lotSize;
-    @Column(name = "defective_items")
-    private Long defectiveItems;
-    private Long proportion;
+    private Long month;
+    private Long intoxicated;
 }
