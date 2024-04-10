@@ -6,6 +6,7 @@ import lombok.*;
 @Builder
 @Data
 @Entity
+@Table(name = "card_c")
 public class CardC {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

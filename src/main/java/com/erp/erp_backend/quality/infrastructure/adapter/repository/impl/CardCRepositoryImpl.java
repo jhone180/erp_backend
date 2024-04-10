@@ -8,4 +8,6 @@ public class CardCRepositoryImpl {
     public CardCRepositoryImpl(CardCRepository cardCRepository){
         this.cardCRepository = cardCRepository;
     }
+
+
 }
