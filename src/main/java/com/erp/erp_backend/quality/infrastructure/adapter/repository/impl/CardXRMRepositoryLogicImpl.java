@@ -1,5 +1,6 @@
 package com.erp.erp_backend.quality.infrastructure.adapter.repository.impl;
 
+import com.erp.erp_backend.quality.exception.exceptions.ObjectNullException;
 import com.erp.erp_backend.quality.infrastructure.adapter.repository.CardXRMRepositoryLogic;
 import com.erp.erp_backend.quality.infrastructure.entity.CardXRM;
 import com.erp.erp_backend.quality.infrastructure.port.repository.CardXRMRepository;
@@ -17,7 +18,7 @@ public class CardXRMRepositoryLogicImpl implements CardXRMRepositoryLogic {
     public void save(Optional<CardXRM> cardXRM) {
         cardXRM.ifPresentOrElse(
                 cardXRM1 -> cardXRMRepository.save(cardXRM1),
-                () -> { throw new RuntimeException("The object CardXRM cannot be null"); }
+                () -> { throw new ObjectNullException(cardXRM); }
         );
     }
 
@@ -27,7 +28,7 @@ public class CardXRMRepositoryLogicImpl implements CardXRMRepositoryLogic {
     }
 
     @Override
-    public CardXRM modify() {
+    public CardXRM modify(Long id, CardXRM cardXRM) {
         return null;
     }
 }
