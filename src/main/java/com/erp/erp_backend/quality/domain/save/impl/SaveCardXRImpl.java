@@ -24,7 +24,7 @@ public class SaveCardXRImpl implements SaveCardXR {
                 cardXRRequest -> createCardXR(cardXRRequest, cardsXRRequest.getUserId())
         ).toList()));
         return PostResponseGeneral.builder()
-                .message("The cards XRM were created successfully")
+                .message("The cards XR were created successfully")
                 .success(true)
                 .build();
     }

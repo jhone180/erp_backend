@@ -24,7 +24,7 @@ public class SaveCardNPImpl implements SaveCardNP {
                 cardNPRequest -> createCardNP(cardNPRequest, cardsNPRequest.getUserId())
         ).toList()));
         return PostResponseGeneral.builder()
-                .message("The cards C were created successfully")
+                .message("The cards NP were created successfully")
                 .success(true)
                 .build();
     }
