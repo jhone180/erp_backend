@@ -12,11 +12,11 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UpdateCardpImpl implements UpdateCardP {
+public class UpdateCardPImpl implements UpdateCardP {
 
     CardPRepositoryLogic cardPRepositoryLogic;
 
-    public UpdateCardpImpl(CardPRepositoryLogic cardPRepositoryLogic) {
+    public UpdateCardPImpl(CardPRepositoryLogic cardPRepositoryLogic) {
         this.cardPRepositoryLogic = cardPRepositoryLogic;
     }
 

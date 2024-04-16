@@ -29,7 +29,7 @@ public class UpdateCardCImpl implements UpdateCardC {
         cardCRepositoryLogic.update(Optional.of(createCardC(updateCardCRequest,
                 readCardC(updateCardCRequest.getId()))));
         return PostResponseGeneral.builder()
-                .message("Card XRM updated successfully")
+                .message("Card C updated successfully")
                 .success(true)
                 .build();
     }

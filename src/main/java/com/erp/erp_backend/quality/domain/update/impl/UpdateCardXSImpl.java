@@ -29,7 +29,7 @@ public class UpdateCardXSImpl implements UpdateCardXS {
         cardXSRepositoryLogic.update(Optional.of(createCardXS(updateCardXSRequest,
                 readCardXS(updateCardXSRequest.getId()))));
         return PostResponseGeneral.builder()
-                .message("Card XRM updated successfully")
+                .message("Card XS updated successfully")
                 .success(true)
                 .build();
     }
