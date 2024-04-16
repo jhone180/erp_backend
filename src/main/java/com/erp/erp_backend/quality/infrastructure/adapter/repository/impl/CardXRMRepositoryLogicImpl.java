@@ -5,8 +5,11 @@ import com.erp.erp_backend.quality.infrastructure.adapter.repository.CardXRMRepo
 import com.erp.erp_backend.quality.infrastructure.entity.CardXRM;
 import com.erp.erp_backend.quality.infrastructure.port.repository.CardXRMRepository;
 
+import java.util.List;
 import java.util.Optional;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CardXRMRepositoryLogicImpl implements CardXRMRepositoryLogic {
     CardXRMRepository cardXRMRepository;
 
@@ -15,20 +18,40 @@ public class CardXRMRepositoryLogicImpl implements CardXRMRepositoryLogic {
     }
 
     @Override
-    public void save(Optional<CardXRM> cardXRM) {
-        cardXRM.ifPresentOrElse(
-                cardXRM1 -> cardXRMRepository.save(cardXRM1),
-                () -> { throw new ObjectNullException(cardXRM); }
-        );
-    }
-
-    @Override
     public CardXRM findByUserId(Long userId) {
         return null;
     }
 
     @Override
-    public CardXRM modify(Long id, CardXRM cardXRM) {
+    public CardXRM create(CardXRM entity) {
         return null;
+    }
+
+    @Override
+    public boolean createAll(Optional<List<CardXRM>> cardXRM) {
+        cardXRM.ifPresentOrElse(
+                cardXRM1 -> cardXRMRepository.saveAll(cardXRM1),
+                () -> { throw new ObjectNullException(cardXRM); }
+        );
+        return true;
+    }
+
+    @Override
+    public boolean update(Optional<CardXRM> entity) {
+        entity.ifPresentOrElse(
+                cardXRM1 -> cardXRMRepository.save(cardXRM1),
+                () -> { throw new ObjectNullException(entity); }
+        );
+        return true;
+    }
+
+    @Override
+    public Optional<CardXRM> read(Long aLong) {
+        return cardXRMRepository.findById(aLong);
+    }
+
+    @Override
+    public void delete(Long aLong) {
+
     }
 }

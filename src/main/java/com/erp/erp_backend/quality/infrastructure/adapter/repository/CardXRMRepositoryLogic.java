@@ -1,17 +1,9 @@
 package com.erp.erp_backend.quality.infrastructure.adapter.repository;
 
-import com.erp.erp_backend.quality.infrastructure.entity.CardXR;
 import com.erp.erp_backend.quality.infrastructure.entity.CardXRM;
-import com.erp.erp_backend.quality.infrastructure.port.repository.CardXRMRepository;
+import com.erp.erp_backend.quality.infrastructure.port.repository.CrudRepository;
 
-import java.util.Optional;
-
-public interface CardXRMRepositoryLogic {
-
-    void save(Optional<CardXRM> cardXRM);
+public interface CardXRMRepositoryLogic extends CrudRepository<CardXRM, Long> {
 
     CardXRM findByUserId(Long userId);
-
-    CardXRM modify();
-
 }

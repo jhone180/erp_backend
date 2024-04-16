@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 @Entity
 @Table(name = "card_c")

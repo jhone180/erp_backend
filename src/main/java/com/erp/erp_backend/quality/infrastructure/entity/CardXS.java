@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 @Entity
 @Table(name = "card_xs")
@@ -13,6 +15,7 @@ public class CardXS {
     private Long id;
     private Long hours;
     private Long sample;
+    private Long weight;
     @Column(name = "user_id")
     private Long userId;
 }
