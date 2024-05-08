@@ -25,5 +25,5 @@ public class SaveCardURequest {
     @JsonProperty("average_number_defects_circuit")
     @NotNull(message = "average_number_defects_circuit is required")
     @Positive(message = "average_number_defects_circuit must be greater than 0")
-    private Long averageNumberDefectsCircuit;
+    private Double averageNumberDefectsCircuit;
 }

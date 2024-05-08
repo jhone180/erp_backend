@@ -39,6 +39,7 @@ public class UpdateCardNPImpl implements UpdateCardNP {
                 .id(updateCardNPRequest.getId())
                 .lot(EqualsUtil.equalsLongOrNull(cardNP.getLot(), updateCardNPRequest.getLot()))
                 .defectiveItemsSample(EqualsUtil.equalsLongOrNull(cardNP.getDefectiveItemsSample(), updateCardNPRequest.getDefectiveItemsSample()))
+                .userId(updateCardNPRequest.getUserId())
                 .build();
     }
 

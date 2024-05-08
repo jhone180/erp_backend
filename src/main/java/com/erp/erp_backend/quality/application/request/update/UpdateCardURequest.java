@@ -21,7 +21,7 @@ public class UpdateCardURequest {
     @JsonProperty("totally_defective")
     private Long totallyDefective;
     @JsonProperty("average_number_defects_circuit")
-    private Long averageNumberDefectsCircuit;
+    private Double averageNumberDefectsCircuit;
     @JsonProperty("user_id")
     @NotNull(message = "user_id is required")
     @Positive(message = "id must be greater than 0")

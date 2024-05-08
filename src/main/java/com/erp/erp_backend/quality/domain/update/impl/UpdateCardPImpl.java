@@ -40,7 +40,7 @@ public class UpdateCardPImpl implements UpdateCardP {
                 .sample(EqualsUtil.equalsLongOrNull(cardP.getSample(), updateCardPRequest.getSample()))
                 .lotSize(EqualsUtil.equalsLongOrNull(cardP.getLotSize(), updateCardPRequest.getLotSize()))
                 .defectiveItems(EqualsUtil.equalsLongOrNull(cardP.getDefectiveItems(), updateCardPRequest.getDefectiveItems()))
-                .proportion(EqualsUtil.equalsLongOrNull(cardP.getProportion(), updateCardPRequest.getProportion()))
+                .proportion(EqualsUtil.equalsDoubleOrNull(cardP.getProportion(), updateCardPRequest.getProportion()))
                 .userId(updateCardPRequest.getUserId())
                 .build();
     }

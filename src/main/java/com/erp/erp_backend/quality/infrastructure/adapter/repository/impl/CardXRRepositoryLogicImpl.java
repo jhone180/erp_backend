@@ -1,9 +1,9 @@
 package com.erp.erp_backend.quality.infrastructure.adapter.repository.impl;
 
+import com.erp.erp_backend.quality.domain.get.objects.AverageAndRange;
 import com.erp.erp_backend.quality.exception.exceptions.ObjectNullException;
 import com.erp.erp_backend.quality.infrastructure.adapter.repository.CardXRRepositoryLogic;
 import com.erp.erp_backend.quality.infrastructure.entity.CardXR;
-import com.erp.erp_backend.quality.infrastructure.entity.CardXRM;
 import com.erp.erp_backend.quality.infrastructure.port.repository.CardXRRepository;
 import java.util.List;
 import java.util.Optional;
@@ -18,8 +18,13 @@ public class CardXRRepositoryLogicImpl implements CardXRRepositoryLogic {
     }
 
     @Override
-    public CardXRM findByUserId(Long userId) {
-        return null;
+    public List<CardXR> findByUserId(Long userId) {
+        return cardXRRepository.findByUserId(userId);
+    }
+
+    @Override
+    public List<AverageAndRange> getAverageAndRange(Long userId) {
+        return cardXRRepository.getAverageAndRange(userId);
     }
 
     @Override
@@ -52,6 +57,6 @@ public class CardXRRepositoryLogicImpl implements CardXRRepositoryLogic {
 
     @Override
     public void delete(Long aLong) {
-
+        cardXRRepository.deleteByUserId(aLong);
     }
 }

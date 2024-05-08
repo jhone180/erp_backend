@@ -12,8 +12,8 @@ import lombok.Getter;
 public class SaveCardsXRRequest {
 
     @Valid
-    @NotNull(message = "The cards_xrm is required")
-    @JsonProperty("cards_xrm")
+    @NotNull(message = "The cards_xr is required")
+    @JsonProperty("cards_xr")
     private List<SaveCardXRRequest> cardsXR;
     @NotNull(message = "The user_id is required")
     @JsonProperty("user_id")

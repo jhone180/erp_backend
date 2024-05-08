@@ -13,8 +13,8 @@ public class SaveCardsXSRequest {
 
     @Valid
     @NotNull(message = "The cards_xrm is required")
-    @JsonProperty("cards_xrm")
-    private List<SaveCardXSRequest> cardsXR;
+    @JsonProperty("cards_xs")
+    private List<SaveCardXSRequest> cardsXS;
     @NotNull(message = "The user_id is required")
     @JsonProperty("user_id")
     private Long userId;

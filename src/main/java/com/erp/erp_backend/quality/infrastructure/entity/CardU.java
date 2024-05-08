@@ -19,7 +19,7 @@ public class CardU {
     @Column(name = "totally_defective")
     private Long totallyDefective;
     @Column(name = "average_number_defects_circuit")
-    private Long averageNumberDefectsCircuit;
+    private Double averageNumberDefectsCircuit;
     @Column(name = "user_id")
     private Long userId;
 }

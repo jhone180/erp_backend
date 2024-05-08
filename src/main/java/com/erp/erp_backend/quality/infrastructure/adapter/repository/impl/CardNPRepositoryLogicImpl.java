@@ -47,6 +47,11 @@ public class CardNPRepositoryLogicImpl implements CardNPRepositoryLogic {
 
     @Override
     public void delete(Long aLong) {
+        cardNPRepository.deleteByUserId(aLong);
+    }
 
+    @Override
+    public List<CardNP> findByUserId(Long cardId) {
+        return cardNPRepository.findByUserId(cardId);
     }
 }

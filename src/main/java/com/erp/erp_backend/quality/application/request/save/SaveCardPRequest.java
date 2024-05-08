@@ -25,5 +25,5 @@ public class SaveCardPRequest {
     @JsonProperty("proportion")
     @NotNull(message = "proportion is required")
     @Positive(message = "proportion must be greater than 0")
-    private Long proportion;
+    private Double proportion;
 }

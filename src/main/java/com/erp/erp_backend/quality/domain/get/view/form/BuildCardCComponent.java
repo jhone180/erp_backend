@@ -1,8 +1,8 @@
 package com.erp.erp_backend.quality.domain.get.view.form;
 
-import com.erp.erp_backend.quality.domain.get.view.component.CardCComponent;
+import com.erp.erp_backend.quality.application.response.get.CardCResponse;
+import java.util.List;
+import java.util.function.Function;
 
-import java.util.function.Supplier;
-
-public interface BuildCardCComponent extends Supplier<CardCComponent> {
+public interface BuildCardCComponent extends Function<Long, List<CardCResponse>> {
 }

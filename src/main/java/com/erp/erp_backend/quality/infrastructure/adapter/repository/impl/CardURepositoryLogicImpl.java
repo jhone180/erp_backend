@@ -4,6 +4,7 @@ import com.erp.erp_backend.quality.exception.exceptions.ObjectNullException;
 import com.erp.erp_backend.quality.infrastructure.adapter.repository.CardURepositoryLogic;
 import com.erp.erp_backend.quality.infrastructure.entity.CardU;
 import com.erp.erp_backend.quality.infrastructure.port.repository.CardURepository;
+import com.erp.erp_backend.quality.infrastructure.port.repository.CardXRRepository;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.stereotype.Service;
@@ -14,7 +15,7 @@ public class CardURepositoryLogicImpl implements CardURepositoryLogic {
 
     CardURepository cardURepository;
 
-    public CardURepositoryLogicImpl(CardURepository cardURepository){
+    public CardURepositoryLogicImpl(CardURepository cardURepository, CardXRRepository cardXRRepository){
         this.cardURepository = cardURepository;
     }
 
@@ -49,6 +50,11 @@ public class CardURepositoryLogicImpl implements CardURepositoryLogic {
 
     @Override
     public void delete(Long aLong) {
+        cardURepository.deleteByUserId(aLong);
+    }
 
+    @Override
+    public List<CardU> findByUserId(Long userId) {
+        return cardURepository.findByUserId(userId);
     }
 }

@@ -40,7 +40,7 @@ public class UpdateCardUImpl implements UpdateCardU {
                 .lot(EqualsUtil.equalsLongOrNull(cardU.getLot(), updateCardURequest.getLot()))
                 .sampleSize(EqualsUtil.equalsLongOrNull(cardU.getSampleSize(), updateCardURequest.getSampleSize()))
                 .totallyDefective(EqualsUtil.equalsLongOrNull(cardU.getTotallyDefective(), updateCardURequest.getTotallyDefective()))
-                .averageNumberDefectsCircuit(EqualsUtil.equalsLongOrNull(cardU.getAverageNumberDefectsCircuit(), updateCardURequest.getAverageNumberDefectsCircuit()))
+                .averageNumberDefectsCircuit(EqualsUtil.equalsDoubleOrNull(cardU.getAverageNumberDefectsCircuit(), updateCardURequest.getAverageNumberDefectsCircuit()))
                 .userId(updateCardURequest.getUserId())
                 .build();
     }

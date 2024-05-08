@@ -1,5 +1,6 @@
 package com.erp.erp_backend.quality.infrastructure.adapter.repository.impl;
 
+import com.erp.erp_backend.quality.domain.get.objects.AverageDeviationsRange;
 import com.erp.erp_backend.quality.exception.exceptions.ObjectNullException;
 import com.erp.erp_backend.quality.infrastructure.adapter.repository.CardXSRepositoryLogic;
 import com.erp.erp_backend.quality.infrastructure.entity.CardXS;
@@ -17,8 +18,13 @@ public class CardXSRepositoryLogicImpl implements CardXSRepositoryLogic {
     }
 
     @Override
-    public CardXS findByUserId(Long userId) {
-        return null;
+    public List<CardXS> findByUserId(Long userId) {
+        return cardXSRepository.findByUserId(userId);
+    }
+
+    @Override
+    public List<AverageDeviationsRange> getAverageDeviationsRange(Long userId) {
+        return cardXSRepository.getAverageDeviationsRange(userId);
     }
 
     @Override
@@ -51,6 +57,6 @@ public class CardXSRepositoryLogicImpl implements CardXSRepositoryLogic {
 
     @Override
     public void delete(Long aLong) {
-
+        cardXSRepository.deleteByUserId(aLong);
     }
 }

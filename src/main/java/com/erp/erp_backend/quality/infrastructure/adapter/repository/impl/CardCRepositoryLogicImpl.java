@@ -50,6 +50,11 @@ public class CardCRepositoryLogicImpl implements CardCRepositoryLogic {
 
     @Override
     public void delete(Long aLong) {
+        cardCRepository.deleteByUserId(aLong);
+    }
 
+    @Override
+    public List<CardC> findByUserId(Long cardId) {
+        return cardCRepository.findByUserId(cardId);
     }
 }

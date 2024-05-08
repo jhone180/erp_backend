@@ -21,7 +21,7 @@ public class UpdateCardPRequest {
     @JsonProperty("defective_items")
     private Long defectiveItems;
     @JsonProperty("proportion")
-    private Long proportion;
+    private Double proportion;
     @JsonProperty("user_id")
     @NotNull(message = "user_id is required")
     @Positive(message = "id must be greater than 0")

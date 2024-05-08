@@ -20,7 +20,7 @@ public class SaveCardXSImpl implements SaveCardXS {
 
     @Override
     public PostResponseGeneral apply(SaveCardsXSRequest cardsXSRequest) {
-        cardXSRepositoryLogic.createAll(Optional.of(cardsXSRequest.getCardsXR().stream().map(
+        cardXSRepositoryLogic.createAll(Optional.of(cardsXSRequest.getCardsXS().stream().map(
                 cardXSRequest -> createCardXS(cardXSRequest, cardsXSRequest.getUserId())
         ).toList()));
         return PostResponseGeneral.builder()
