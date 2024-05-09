@@ -14,7 +14,7 @@ public class MyConfiguration {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost") // Permitir solicitudes desde 'http://localhost'
+                        .allowedOrigins("https://erpfrontend-production.up.railway.app")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("Content-Type")
                         .allowCredentials(true);
